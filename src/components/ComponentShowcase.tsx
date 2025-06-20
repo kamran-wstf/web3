@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
+import {
   MessageSquare,
   Shield,
   Code2,
@@ -174,13 +174,13 @@ const ComponentShowcase: React.FC = () => {
   };
 
   return (
-    <section 
-      id="components" 
+    <section
+      id="components"
       className="py-16 md:py-24 relative"
       ref={ref}
     >
       <div className="container-custom">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -202,11 +202,10 @@ const ComponentShowcase: React.FC = () => {
                   setActiveCategory(index);
                   setExpandedComponent(null);
                 }}
-                className={`flex items-center px-4 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${
-                  activeCategory === index
+                className={`flex items-center px-4 py-3 rounded-lg transition-all duration-300 whitespace-nowrap ${activeCategory === index
                     ? 'bg-secondary text-white'
                     : 'bg-background-light text-gray-300 hover:bg-primary/30'
-                }`}
+                  }`}
               >
                 <span className="mr-2">{category.icon}</span>
                 <span>{category.title}</span>
@@ -239,9 +238,8 @@ const ComponentShowcase: React.FC = () => {
               {categories[activeCategory].components.map((component) => (
                 <motion.div
                   key={component.id}
-                  className={`card cursor-pointer transition-all duration-500 ${
-                    expandedComponent === component.id ? 'md:col-span-2 row-span-2' : ''
-                  }`}
+                  className={`card cursor-pointer transition-all duration-500 ${expandedComponent === component.id ? 'md:col-span-2 row-span-2' : ''
+                    }`}
                   onClick={() => toggleComponent(component.id)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -294,20 +292,21 @@ const ComponentShowcase: React.FC = () => {
           </AnimatePresence>
 
           {/* Navigation Arrows */}
-          <div className="absolute top-1/2 -left-4 transform -translate-y-1/2 hidden lg:block">
+          <div className="hidden lg:flex items-center absolute left-[-48px] top-1/2 -translate-y-1/2 z-10 ">
             <button
               onClick={prevCategory}
-              className="bg-background-light p-3 rounded-full text-white hover:bg-primary transition-colors duration-300"
+              className="bg-background-light p-3 rounded-full text-white hover:bg-primary transition-colors duration-300 shadow"
               aria-label="Previous category"
             >
               <ChevronLeft size={24} />
             </button>
           </div>
-          
-          <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 hidden lg:block">
+
+          {/* Right Arrow */}
+          <div className="hidden lg:flex items-center absolute right-[-48px] top-1/2 -translate-y-1/2 z-10">
             <button
               onClick={nextCategory}
-              className="bg-background-light p-3 rounded-full text-white hover:bg-primary transition-colors duration-300"
+              className="bg-background-light p-3 rounded-full text-white hover:bg-primary transition-colors duration-300 shadow"
               aria-label="Next category"
             >
               <ChevronRight size={24} />
@@ -333,7 +332,7 @@ const ComponentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Background elements */}
       <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-secondary/5 rounded-full filter blur-3xl -z-10"></div>
       <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-accent/5 rounded-full filter blur-3xl -z-10"></div>

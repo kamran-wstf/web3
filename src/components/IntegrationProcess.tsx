@@ -141,19 +141,19 @@ const IntegrationProcess: React.FC = () => {
         </motion.div>
         
         <motion.div
-          className="mt-16 text-center p-6 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-lg"
+          className="relative z-20 mt-48 text-center p-8 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-xl shadow-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h3 className="text-2xl font-bold mb-3">Ready to start your Web3 journey?</h3>
-          <p className="text-gray-300 mb-6">Experience the simplest and most secure way to enter Web3.</p>
-          <a href="#contact" className="btn-primary inline-flex items-center">
-            Start with Telegram <MessageSquare size={18} className="ml-2" />
+          <h3 className="text-3xl font-bold mb-4 text-white">Ready to start your Web3 journey?</h3>
+          <p className="text-gray-200 mb-8">Experience the simplest and most secure way to enter Web3.</p>
+          <a href="#contact" className="btn-primary inline-flex items-center px-6 py-3 rounded-full font-semibold shadow-md hover:bg-primary/90 transition">
+            Start with Telegram <MessageSquare size={20} className="ml-2" />
           </a>
         </motion.div>
       </div>
-      
+
       {/* Background elements */}
       <div className="absolute top-1/3 left-0 w-80 h-80 bg-accent/5 rounded-full filter blur-3xl -z-10"></div>
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl -z-10"></div>

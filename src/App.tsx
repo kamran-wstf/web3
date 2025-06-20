@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
@@ -10,6 +9,9 @@ import CaseStudy from './components/CaseStudy';
 import Security from './components/Security';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ShowProjects from './components/Project';
+import ProjectShowcase from './components/Project';
+import BlockchainMarquee from './components/supportedChain';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Header />
         <main>
           <Hero />
+          <ProjectShowcase />
+          <BlockchainMarquee/>
           <ProblemSolution />
           <ComponentShowcase />
           <Benefits />
