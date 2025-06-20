@@ -19,7 +19,7 @@ const projects: Project[] = [
     {
         id: 1,
         title: "SIDEBOT - TRADING PLATFORM",
-        description: "A modern, scalable e-commerce solution with real-time inventory management and advanced analytics.",
+        description: "Sidebot which lets you trade any token on any chain effortlessly right through Telegram! By leveraging chain abstraction, Sidebot unifies interactions across multiple blockchains, simplifying crypto trading and asset management.",
         image: "https://thewasserstoff.com/images/ecosystem/sidebot.svg",
         tags: ["React", "Node.js", "PostgreSQL", "Redis"],
         status: "featured",
@@ -27,8 +27,8 @@ const projects: Project[] = [
     },
     {
         id: 2,
-        title: "AI-Powered Dashboard",
-        description: "Intelligent business analytics dashboard with machine learning insights and predictive modeling.",
+        title: "UATU",
+        description: "Uatu is a real-time, high-performance blockchain analytics engine that decodes and structures on-chain activity at scale. Ask questions in plain English and get instant insights.",
         image: "https://thewasserstoff.com/images/ecosystem/uatulogo.svg",
         tags: ["Python", "TensorFlow", "React", "D3.js"],
         status: "completed",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     {
         id: 3,
         title: "ZKCross Network",
-        description: "Secure, user-friendly mobile banking application with biometric authentication and real-time transactions.",
+        description: "zkCross Network is an AI-native DeFi infrastructure connecting all blockchains. It serves as the orchestration layer that automates cross-chain liquidity movements, smart contract calls, and DeFi strategies in a trustless manner.",
         image: "https://zkcross.network/site/logo.svg",
         tags: ["React Native", "Blockchain", "AWS", "TypeScript"],
         status: "in-progress",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     {
         id: 4,
         title: "HASHNIPE",
-        description: "Secure, user-friendly mobile banking application with biometric authentication and real-time transactions.",
+        description: "Identify and snipe the best AI agents on Virtual Protocol in the earliest possible blocks. Let our intelligent agent analyze and score projects to maximize your investment potential.",
         image: "https://hashnipe.online/hashnipe.png",
         tags: ["React Native", "Blockchain", "AWS", "TypeScript"],
         status: "in-progress",
