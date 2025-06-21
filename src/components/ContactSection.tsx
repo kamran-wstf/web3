@@ -1,7 +1,41 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Send, MessageSquare, Calendar, Bot } from 'lucide-react';
+import { Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
+
+const actions = [
+  {
+    icon: <Send size={32} className="text-secondary mr-4 mt-1" />,
+    title: "Start with Telegram",
+    description:
+      "Begin your Web3 journey instantly through our Telegram bot. Simple, secure, and ready to use.",
+    link: "https://t.me/SideTest_Bot?start=bot---start",
+    button: "Open Telegram Bot",
+    gradient: "bg-gradient-to-r from-secondary/10 to-accent/10",
+  },
+  {
+    icon: <Send size={24} className="text-secondary mr-4 mt-1" />,
+    title: "Schedule a Demo",
+    description:
+      "Get a personalized walkthrough of our security architecture and features.",
+    link: "https://t.me/SideTest_Bot?start=bot---demo",
+    button: "Book Demo",
+    gradient: "bg-gradient-to-r from-accent/10 to-secondary/10",
+  },
+  {
+    icon: <Send size={24} className="text-secondary mr-4 mt-1" />,
+    title: "Developer Support",
+    description:
+      "Get technical assistance for integrating Wasserstoff into your dApp.",
+    link: "https://t.me/SideTest_Bot?start=bot---chatAI",
+    button: "Join Developer Chat",
+    gradient: "bg-gradient-to-r from-secondary/10 to-accent/10",
+  },
+];
+
+const initialForm = { name: "", email: "", project: "", message: "" };
 
 const ContactSection: React.FC = () => {
   const [ref, inView] = useInView({
@@ -9,25 +43,30 @@ const ContactSection: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    project: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+  const [formData, setFormData] = useState(initialForm);
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await emailjs.send(
+        "service_kit7qlt",      // replace with your EmailJS service ID
+        "template_7bqh7hf",     // replace with your EmailJS template ID
+        formData,
+        "U8rZvK8d2A839CK6v"       // replace with your EmailJS public key
+      );
+      setSent(true);
+      setFormData(initialForm);
+    } catch (error) {
+      alert("Failed to send message. Please try again.");
+    }
+    setLoading(false);
   };
 
   return (
@@ -46,11 +85,11 @@ const ContactSection: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          > */}
             <div className="card h-full">
               <h3 className="text-2xl font-bold mb-6">Get Started</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -114,12 +153,18 @@ const ContactSection: React.FC = () => {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn-primary w-full">
-                  Send Message <Send size={18} className="ml-2" />
+                <button type="submit" className="btn-primary w-full" disabled={loading}>
+                  {loading ? 'Sending...' : 'Send Message'} <Send size={18} className="ml-2" />
                 </button>
+
+                {sent && (
+                  <p className="text-green-500 text-sm mt-4">
+                    Message sent successfully!
+                  </p>
+                )}
               </form>
             </div>
-          </motion.div>
+          {/* </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -127,50 +172,25 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6"
           >
-            <div className="card bg-gradient-to-r from-secondary/10 to-accent/10">
-              <div className="flex items-start">
-                <Bot size={32} className="text-secondary mr-4 mt-1" />
+            {actions.map((action, idx) => (
+              <div
+                key={idx}
+                className={`card ${action.gradient} rounded-xl p-6 shadow flex items-start`}
+              >
+                {action.icon}
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Start with Telegram</h3>
+                  <h3 className="text-xl font-bold mb-2">{action.title}</h3>
                   <p className="text-gray-300 mb-4">
-                    Begin your Web3 journey instantly through our Telegram bot. Simple, secure, and ready to use.
+                    {action.description}
                   </p>
-                  <button className="btn-secondary">
-                    Open Telegram Bot
-                  </button>
+                  <a href={action.link} target="_blank">
+                    <button className="btn-secondary">
+                      {action.button}
+                    </button>
+                  </a>
                 </div>
               </div>
-            </div>
-
-            <div className="card">
-              <div className="flex items-start">
-                <Calendar size={24} className="text-secondary mr-4 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Schedule a Demo</h3>
-                  <p className="text-gray-300 mb-4">
-                    Get a personalized walkthrough of our security architecture and features.
-                  </p>
-                  <button className="btn-secondary">
-                    Book Demo
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="flex items-start">
-                <MessageSquare size={24} className="text-secondary mr-4 mt-1" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Developer Support</h3>
-                  <p className="text-gray-300 mb-4">
-                    Get technical assistance for integrating Wasserstoff into your dApp.
-                  </p>
-                  <button className="btn-secondary">
-                    Join Developer Chat
-                  </button>
-                </div>
-              </div>
-            </div>
+            ))}
           </motion.div>
         </div>
       </div>

@@ -50,20 +50,7 @@ const Header: React.FC = () => {
           </ul>
 
           <div className="flex items-center space-x-4">
-            <a
-              href="#"
-              className="text-gray-300 hover:text-secondary transition-colors duration-300"
-              title="Documentation"
-            >
-              <Book size={20} />
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-secondary transition-colors duration-300"
-              title="GitHub"
-            >
-              <Github size={20} />
-            </a>
+           
             <button className="btn-primary">Schedule Demo</button>
           </div>
         </nav>

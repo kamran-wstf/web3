@@ -19,7 +19,7 @@ const projects: Project[] = [
     {
         id: 1,
         title: "SIDEBOT - TRADING PLATFORM",
-        description: "Sidebot which lets you trade any token on any chain effortlessly right through Telegram! By leveraging chain abstraction, Sidebot unifies interactions across multiple blockchains, simplifying crypto trading and asset management.",
+        description: "Sidebot lets you trade any token on any chain directly from Telegram. It simplifies crypto trading and asset management by abstracting blockchain complexity, offering seamless cross-chain interaction through a unified and intuitive interface.",
         image: "https://thewasserstoff.com/images/ecosystem/sidebot.svg",
         tags: ["React", "Node.js", "PostgreSQL", "Redis"],
         status: "featured",
@@ -28,7 +28,7 @@ const projects: Project[] = [
     {
         id: 2,
         title: "UATU",
-        description: "Uatu is a real-time, high-performance blockchain analytics engine that decodes and structures on-chain activity at scale. Ask questions in plain English and get instant insights.",
+        description: "Uatu is a high-performance blockchain analytics engine that turns complex on-chain activity into clear insights. Using natural language, users can query blockchain data in real time to gain actionable intelligence across major crypto ecosystems.",
         image: "https://thewasserstoff.com/images/ecosystem/uatulogo.svg",
         tags: ["Python", "TensorFlow", "React", "D3.js"],
         status: "completed",
@@ -37,7 +37,7 @@ const projects: Project[] = [
     {
         id: 3,
         title: "ZKCross Network",
-        description: "zkCross Network is an AI-native DeFi infrastructure connecting all blockchains. It serves as the orchestration layer that automates cross-chain liquidity movements, smart contract calls, and DeFi strategies in a trustless manner.",
+        description: "zkCross Network is an AI-native DeFi orchestration layer that automates cross-chain liquidity, contract calls, and DeFi flows. It connects multiple blockchains seamlessly, ensuring trustless, efficient, and scalable financial operations.",
         image: "https://zkcross.network/site/logo.svg",
         tags: ["React Native", "Blockchain", "AWS", "TypeScript"],
         status: "in-progress",
@@ -46,7 +46,7 @@ const projects: Project[] = [
     {
         id: 4,
         title: "HASHNIPE",
-        description: "Identify and snipe the best AI agents on Virtual Protocol in the earliest possible blocks. Let our intelligent agent analyze and score projects to maximize your investment potential.",
+        description: "Hashnipe helps identify and snipe promising AI agents on the Virtual Protocol during the earliest blocks. Using real-time analysis and ranking algorithms, it maximizes alpha capture and ensures faster, data-driven crypto investment decisions.",
         image: "https://hashnipe.online/hashnipe.png",
         tags: ["React Native", "Blockchain", "AWS", "TypeScript"],
         status: "in-progress",
@@ -55,7 +55,7 @@ const projects: Project[] = [
     {
         id: 5,
         title: "SETU - Cross-Chain Bridge",
-        description: "Setu is a decentralized, trustless cross-chain bridge that enables keyless transaction signing using Internet Computer’s threshold cryptography. It supports Stellar, Sui, and Solana blockchains with custom canister-based signers that never expose private keys. Liquidity accounts are generated and controlled using Ed25519 or Schnorr signatures without any central custody. Setu is designed for secure DeFi flows like token transfers, staking, and TVL-based governance.",
+        description: "Setu is a decentralized bridge using threshold cryptography for keyless signing. It connects chains like Stellar, Sui, and Solana with secure, non-custodial flows for staking, transfers, and governance, all powered by Internet Computer tech.",
         image: "https://media.licdn.com/dms/image/v2/D560BAQHNJ_Thkh-tSQ/company-logo_200_200/B56ZYv3oHbGUAI-/0/1744559837171?e=1755734400&v=beta&t=pbpRxZg_YEvOSk75yKMDQ5AiMjr1rw4JLs-dUR9MVAY",
         tags: ["React Native", "Blockchain", "AWS", "TypeScript"],
         status: "in-progress",
@@ -64,13 +64,14 @@ const projects: Project[] = [
     {
         id: 6,
         title: "BigAds Network",
-        description: "BigAds Network is developing an AI-powered, blockchain-based gaming technology that adapts in real time to player behavior. This innovative system is designed to deliver seamless, rewarding, and non-intrusive experiences within the game world.",
+        description: "BigAds Network creates blockchain-integrated, AI-driven game tech that adapts to player behavior in real time. It delivers immersive and rewarding gameplay by blending analytics, personalization, and decentralized monetization strategies.",
         image: "https://static.wixstatic.com/media/555bcd_a187918faabf410b871ca18ac8d4b888~mv2.png/v1/fill/w_175,h_85,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/BigAds%20Logo-01%20(1).png",
         tags: ["React Native", "Blockchain", "AWS", "TypeScript"],
         status: "in-progress",
         metrics: { users: "100K+", growth: "450%", rating: "4.7" }
     }
 ];
+
 
 
 
