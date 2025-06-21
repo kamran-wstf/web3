@@ -12,9 +12,11 @@ import Footer from './components/Footer';
 import ShowProjects from './components/Project';
 import ProjectShowcase from './components/Project';
 import BlockchainMarquee from './components/supportedChain';
+import ContactForm from './components/ContactFrom';
 
 function App() {
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-b from-background to-background-light text-white">
       <div className="grid-pattern min-h-screen overflow-hidden">
         <Header />
@@ -34,6 +36,7 @@ function App() {
         <Footer />
       </div>
     </div>
+    </>
   );
 }
 

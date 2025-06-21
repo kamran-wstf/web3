@@ -27,13 +27,22 @@ const Notification: React.FC<NotificationBarProps> = ({ onClose }) => {
                 <div className="flex items-center justify-between max-w-7xl mx-auto">
                     <div className="flex-1 flex items-center justify-center space-x-6">
                         <div className="flex items-center space-x-3">
+
                             <div className="flex items-center space-x-2">
-                                <Rocket className="w-5 h-5 text-cyan-400 animate-pulse" />
+                                <img
+                                    src="https://gorbaganachain.xyz/logo.png"
+                                    alt="Garbogara Logo"
+                                    className="w-6 h-6 object-contain animate-pulse"
+                                    onError={(e) => {
+                                        // Fallback if image fails to load
+                                        e.currentTarget.style.display = 'none';
+                                    }}
+                                />
                                 <span className="text-gray-300 text-sm font-medium">
                                     We are launching
                                 </span>
                                 <span className="text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-sm font-bold">
-                                    Garbogana
+                                    Gorbaganachain
                                 </span>
                             </div>
 
