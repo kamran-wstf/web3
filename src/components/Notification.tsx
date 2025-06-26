@@ -20,7 +20,7 @@ const Notification: React.FC<NotificationBarProps> = ({ onClose }) => {
     if (!isVisible) return null;
 
     return (
-        <div className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-cyan-500/20">
+        <div className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-b border-cyan-500/20 ">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
 
             <div className="relative px-4 py-2">

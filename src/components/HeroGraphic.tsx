@@ -51,7 +51,7 @@ const HeroGraphic: React.FC = () => {
   return (
     <div className="relative w-full max-w-lg mx-auto">
       <motion.svg
-        viewBox="0 0 350 350"
+        viewBox="0 -10 350 365"
         className="w-full"
         initial="hidden"
         animate="visible"

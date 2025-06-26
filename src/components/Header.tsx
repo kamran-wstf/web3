@@ -3,6 +3,7 @@ import { Menu, X, Github, Book, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
 import Notification from './Notification';
+import { title } from 'framer-motion/client';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,6 +19,8 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
+    { title: "Home", href: "#home" },
+    { title: "Project", href: "#projects" },
     { title: 'Components', href: '#components' },
     { title: 'Benefits', href: '#benefits' },
     { title: 'Integration', href: '#integration' },

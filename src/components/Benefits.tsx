@@ -60,7 +60,7 @@ const Benefits: React.FC = () => {
 
   return (
     <section id="benefits" className="py-16 md:py-24 relative" ref={ref}>
-      <div className="container-custom">
+      <div className="container-custom pt-24">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

@@ -29,10 +29,7 @@ const Security: React.FC = () => {
       icon: <Eye size={32} className="text-secondary" />,
       title: "Real-time Monitoring",
       description: "Continuous security monitoring with automated threat detection and response."
-    }
-  ];
-
-  const auditFeatures = [
+    },
     {
       icon: <Server size={24} className="text-accent" />,
       title: "Infrastructure Audits",
@@ -47,8 +44,8 @@ const Security: React.FC = () => {
 
   return (
     <section id="security" className="py-16 md:py-24 relative" ref={ref}>
-      <div className="container-custom">
-        <motion.div 
+      <div className="container-custom pt-24">
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -83,35 +80,21 @@ const Security: React.FC = () => {
         </div>
 
         <motion.div
-          className="mt-16 p-8 card bg-gradient-to-r from-background via-background-light to-background"
+          className="p-8 mt-8 card bg-gradient-to-r from-background via-background-light to-background"
           initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 1, y: 20 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {auditFeatures.map((feature, index) => (
-              <div key={index} className="flex items-start">
-                <div className="w-12 h-12 bg-background-light rounded-lg flex items-center justify-center mr-4">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                  <p className="text-gray-300 text-sm">{feature.description}</p>
-                </div>
+          <div className="border-t border-primary/30 text-center">
+            <h3 className="text-2xl font-bold mb-6">Security Certifications</h3>
+            <div className="flex justify-center gap-12">
+              <div className="p-6  rounded-xl flex flex-col items-center shadow-md hover:shadow-lg transition">
+                <img src="/iso logo.png" alt="ISO 27001" className="w-16 h-16 object-contain mb-3" />
+                <div className="text-base font-semibold text-gray-200">ISO 27001</div>
               </div>
-            ))}
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-primary/30 text-center">
-            <h3 className="text-2xl font-bold mb-4">Security Certifications</h3>
-            <div className="flex justify-center gap-8">
-              <div className="p-4 bg-background-light rounded-lg">
-                <Shield size={32} className="text-secondary mx-auto mb-2" />
-                <div className="text-sm text-gray-300">ISO 27001</div>
-              </div>
-              <div className="p-4 bg-background-light rounded-lg">
-                <Lock size={32} className="text-accent mx-auto mb-2" />
-                <div className="text-sm text-gray-300">SOC 2 Type II</div>
+              <div className="p-6  rounded-xl flex flex-col items-center shadow-md hover:shadow-lg transition">
+                <img src="/soc logo.png" alt="SOC 2 Type II" className="w-16 h-16 object-contain mb-3" />
+                <div className="text-base font-semibold text-gray-200">SOC 2 Type II</div>
               </div>
             </div>
           </div>

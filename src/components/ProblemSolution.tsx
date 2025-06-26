@@ -78,7 +78,7 @@ const ProblemSolution: React.FC = () => {
   return (
     <section 
       id="problem-solution" 
-      className="py-16 md:py-24 relative"
+      className="py-16 md:py-24 relative pt-20"
       ref={ref}
     >
       <div className="container-custom">

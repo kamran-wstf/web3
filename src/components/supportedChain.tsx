@@ -41,7 +41,7 @@ const blockchains = [
 
 const BlockchainMarquee: React.FC = () => (
 	<div className="w-full py-6 overflow-hidden">
-		<div className="text-center mb-4">
+		<div className="text-center mb-8">
 			<h2 className="text-xl md:text-2xl font-bold text-white tracking-wide">
 				Supported & Partnered Blockchains
 			</h2>

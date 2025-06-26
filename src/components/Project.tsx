@@ -98,9 +98,9 @@ const ProjectShowcase: React.FC = () => {
 
 
 
-
+ 
     return (
-        <div className=" py-16 px-4 min-h-screen">
+        <div className="py-16 px-4 min-h-screen pt-40" id='projects'>
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-white mb-3">

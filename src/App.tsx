@@ -18,7 +18,7 @@ function App() {
   return (
     <>
     <div className="min-h-screen bg-gradient-to-b from-background to-background-light text-white">
-      <div className="grid-pattern min-h-screen overflow-hidden">
+      <div className="grid-pattern min-h-screen">
         <Header />
         <main>
           <Hero />
@@ -29,7 +29,7 @@ function App() {
           <Benefits />
           <CompetitiveAdvantage />
           <IntegrationProcess />
-          <CaseStudy />
+          {/* <CaseStudy /> */}
           <Security />
           <ContactSection />
         </main>

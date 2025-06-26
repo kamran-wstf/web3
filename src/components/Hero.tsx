@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageSquare, Shield, Code2 } from 'lucide-react';
+import { MessageSquare, Shield } from 'lucide-react';
 import HeroGraphic from './HeroGraphic';
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen pt-20 flex items-center relative overflow-hidden">
-      <div className="container-custom py-16 md:py-24">
+    <section className="min-h-screen pt-20 flex items-center relative overflow-hidden" id='home'>
+      <div className="container-custom py-16 md:py-24 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -52,8 +52,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="relative flex justify-center"
-          >
+            className="relative w-full max-w-lg mx-auto">
             <HeroGraphic />
           </motion.div>
         </div>
