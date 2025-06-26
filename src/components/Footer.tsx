@@ -49,8 +49,12 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-gray-700 text-center text-sm flex flex-col items-center gap-2">
+          <div className="flex items-center justify-center gap-2 ">
+            <img src="https://thewasserstoff.com/images/logo-black.png" alt="Wasserstoff Logo" className="h-6 w-auto bg-white rounded-full" />
+            <span className="text-gray-400">Powered by <span className="font-semibold text-white">Wasserstoff Pvt Ltd</span></span>
+          </div>
+          <p className="text-gray-500">&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
         </div>
       </div>
     </footer>
